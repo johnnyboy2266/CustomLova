@@ -163,3 +163,12 @@ html
 .contactForm {
 	padding-top: 50px;
 }
+
+.table {
+	font-size: 20px;
+	background-image: url(../images/LogoBallTrans.png);
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	background-position: center center;
+	
+}
