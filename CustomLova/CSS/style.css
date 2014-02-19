@@ -1,3 +1,4 @@
+@import url("../webfonts/neuropol_x_free/stylesheet.css");
 html
 {
 	background-image: -webkit-linear-gradient(270deg,rgba(240,255,0,1.00) 0%,rgba(255,150,0,1.00) 43.52%);
@@ -19,8 +20,10 @@ html
 
 #nav
 	{
-	width: 860px;
+	width: 1000px;
 	white-space: nowrap;
+	font-family: "neuropol x free";
+	font-size: 12px;
 	}
 
 		#nav > ul
