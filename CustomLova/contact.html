@@ -13,10 +13,20 @@ function set_body_height()
 {
     var ww = $(window).width();
 	var wh = $(window).height();
-    document.getElementById('logoF').width = ww*.5;
-	document.getElementById('logoF').height = document.getElementById('logoF').width/2;
+	if(ww < 800)
+	{
+    	document.getElementById('smlogo').width = ww*.25;
+		document.getElementById('smlogo').height = document.getElementById('smlogo').width;
+	}
+	else
+	{
+		document.getElementById('smlogo').width = 200;
+		document.getElementById('smlogo').height = document.getElementById('smlogo').width;
+	}
 	var crTop = document.getElementById('cr');
 	crTop.style.top = wh*.9;
+	document.getElementById('smlogo1').width = document.getElementById('smlogo').width;
+	document.getElementById('smlogo1').height = document.getElementById('smlogo').height;
 }
 $(document).ready(function() {
     set_body_height();
@@ -76,11 +86,25 @@ $(document).ready(function() {
               </ul>
              </Nav>
         </div>
+        <div class="smlogo1" align="center">
+        <a href="index.html"><img src="images/transSmLogo.png" alt="" id="smlogo1" /></a>
+        </div>
+       <div class="smlogo" align="center">
+       		<a href="index.html"><img src="images/logoNoWordsRotate.png" alt="" id="smlogo" /></a>
+        </div>
         <div class="contactInfo" align="center">
             <pre wrap="">Bruce and Mary White
 <a href="mailto:white323@cox.net">white323@cox.net</a>
-504-736-0588</pre>
+504-736-0588
+
+
+White Sands
+Next to Dive Bar (2601 Severn Ave.)
+Metairie, LA 70002</pre>
         </div>
+        <div class="map" align="center">
+	        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d863.8272709020762!2d-90.1595484!3d29.999280194975338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8620b03d3b0c6bb9%3A0x4f85fca18362569b!2s2601+Severn+Ave!5e0!3m2!1sen!2sus!4v1392926463077" width="600" height="450" frameborder="0" style="border:0"></iframe>
+		</div>        
         <div class="cr" align="center" id="cr">
             &copy; 2014	
         </div>

@@ -13,10 +13,20 @@ function set_body_height()
 {
     var ww = $(window).width();
 	var wh = $(window).height();
-    document.getElementById('logoF').width = ww*.5;
-	document.getElementById('logoF').height = document.getElementById('logoF').width/2;
+	if(ww < 800)
+	{
+    	document.getElementById('smlogo').width = ww*.25;
+		document.getElementById('smlogo').height = document.getElementById('smlogo').width;
+	}
+	else
+	{
+		document.getElementById('smlogo').width = 200;
+		document.getElementById('smlogo').height = document.getElementById('smlogo').width;
+	}
 	var crTop = document.getElementById('cr');
 	crTop.style.top = wh*.9;
+	document.getElementById('smlogo1').width = document.getElementById('smlogo').width;
+	document.getElementById('smlogo1').height = document.getElementById('smlogo').height;
 }
 $(document).ready(function() {
     set_body_height();
@@ -75,6 +85,12 @@ $(document).ready(function() {
                   </li>
               </ul>
              </Nav>
+        </div>
+        <div class="smlogo1" align="center">
+        <a href="index.html"><img src="images/transSmLogo.png" alt="" id="smlogo1" /></a>
+        </div>
+       <div class="smlogo" align="center">
+       		<a href="index.html"><img src="images/logoNoWordsRotate.png" alt="" id="smlogo" /></a>
         </div>
         <div class="logo" align="center">
             <p style="font-weight: bolder; font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif;">Please click the image or <a href="images/LOVA SPRING REGISTRATION 2014.pdf" target="_blank">here</a> for printable document.</p>
